@@ -9,37 +9,45 @@
 <body>
     <h1>CADASTRAR ALUNO</h1>
 
-    <label for="">Nome: </label>
-    <input name="name" type="text" placeholder="Digite o nome...">
+    <form action="" method="POST">
+        @csrf
 
-    <br /><br />
+        <label for="">Nome: </label>
+        <input name="name" type="text" placeholder="Digite o nome...">
 
-    <label for="">Celular: </label>
-    <input name="phone" type="text" placeholder="Digite o celular...">
+        <br /><br />
 
-    <br /><br />
+        <label for="">Celular: </label>
+        <input name="phone" type="text" placeholder="Digite o celular...">
 
-    <label for="">Descrição: </label>
-    <input name="description" type="textarea" placeholder="Digite a descrição...">
+        <br /><br />
 
-    <br /><br />
+        <label for="">Descrição: </label>
+        <input name="description" type="textarea" placeholder="Digite a descrição...">
 
-    <label for="">Status: </label>
+        <br /><br />
 
-    <select name="status" id="cars">
-        <option value=0> ======== </option>
-        <option value=0>Matrículado</option>
-        <option value=1>Transferido</option>
-    </select>
+        <label for="">Status: </label>
 
-    <br /><br />
+        <select name="status" id="cars">
+            <option value=0> ======== </option>
+            <option value=0>Matrículado</option>
+            <option value=1>Transferido</option>
+        </select>
 
-    <label for="">Série: </label>
-    <input name="status" type="text" placeholder="Digite a série do aluno...">
+        <br /><br />
 
-    <br /><br />
+        <label for="">Série: </label>
+        <input name="status" type="text" placeholder="Digite a série do aluno...">
 
-    <label for="">Inserir foto do aluno: </label>
-    <input name="file" type="file" placeholder="Insira a foto do aluno">
+        <br /><br />
+
+        <label for="">Inserir foto do aluno: </label>
+        <input name="file" type="file" placeholder="Insira a foto do aluno">
+
+        <br /><br /><br /><br />
+
+        <button>Salvar</button>
+    </form>
 </body>
 </html>
