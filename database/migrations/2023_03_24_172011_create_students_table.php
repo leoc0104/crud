@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('description');
             $table->boolean('status'); // Matrículado ou transferido
-            $table->string('grade')->nullable(); // Se estiver matrículado, not null, se não, null.
+            $table->string('grade')->nullable();
             $table->text('file')->nullable();
             $table->timestamps();
         });
