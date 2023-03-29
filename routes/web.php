@@ -15,42 +15,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('register_students'); // Trocar para index
-});
-
-// Create
-
-Route::post('/register_students', function(Request $info) {
-    dd($info->all());
-});
-
-// Read
-
-Route::get('/read_student/{student_id}', function($info) {
-    $student = Student::findOrFail($info);
-    echo $student->name;
-    echo "<br />";
-});
-
-// Update
-
-Route::get('/edit_student/{student_id}', function($info) {
-    $student = Student::findOrFail($info);
-    return view('edit_student', ['student' => $student]);
-});
-
-Route::put('/update_student/{student_id}', function(Request $info, $student_id) {
-    $student = Student::findOrFail($student_id);
-    $student->name = $info->student_name;
-    $student->phone = $info->student_phone;
-    $student->save();
-    echo "Aluno atualizado com sucesso!";
-});
-
-// Delete
-
-Route::get('/delete_student/{student_id}', function($student_id) {
-    $student = Student::findOrFail($student_id);
-    $student->delete();
-    echo "Aluno excluído com sucesso";
+    return view('home'); // Trocar para index
 });
