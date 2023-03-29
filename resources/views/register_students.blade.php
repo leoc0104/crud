@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CADASTRAR | WANDERER</title>
+    <title>CADASTRAR</title>
 </head>
 <body>
     <h1>CADASTRAR ALUNO</h1>
 
-    <form action="" method="POST">
+    <form action="/register_students" method="POST">
         @csrf
 
         <label for="">Nome: </label>
@@ -23,16 +23,16 @@
         <br /><br />
 
         <label for="">Descrição: </label>
-        <input name="description" type="textarea" placeholder="Digite a descrição...">
+        <input name="description" type="text" placeholder="Digite a descrição...">
 
         <br /><br />
 
         <label for="">Status: </label>
 
-        <select name="status" id="cars">
-            <option value=0> ======== </option>
-            <option value=0>Matrículado</option>
-            <option value=1>Transferido</option>
+        <select name="status">
+            <option value="null"> ========== </option>
+            <option value="0">Matrículado</option>
+            <option value="1">Transferido</option>
         </select>
 
         <br /><br />
@@ -47,7 +47,7 @@
 
         <br /><br /><br /><br />
 
-        <button>Salvar</button>
+        <button>SALVAR</button>
     </form>
 </body>
 </html>
