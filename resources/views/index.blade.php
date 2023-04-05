@@ -1,38 +1,56 @@
 @extends('templates.template')
 
 @section('content')
-    <h1 class="text-center">CRUD</h1>
+  <h1 class="text-center mt-5 mb-5">CRUD</h1>
 
-    <div class="col-8 m-auto">
-        <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
+  <hr>
+
+  <div class="text-center mt-4 mb-4">
+    <a href="">
+      <button class="btn btn-success">CADASTRAR</button>
+    </a>
+  </div>
+
+  <div class="col-8 m-auto">
+    <table class="table text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Apelido</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Altura</th>
+          <th scope="col">Ação</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @foreach ($student as $students)
+          @php
+            $user = $students->find($students->id)->relUsers;
+          @endphp
+          <tr>
+            <th scope="row">{{$students->id}}</th>
+            <td>{{$user->name}}</td>
+            <td>{{$students->nickname}}</td>
+            <td>{{$students->age}}</td>
+            <td>{{$students->height}}</td>
+            <td>
+              <a href="">
+                <button class="btn btn-dark">VISUALIZAR</button>
+              </a>
+
+              <a href="">
+                <button class="btn btn-primary">EDITAR</button>
+              </a>
+
+              <a href="">
+                <button class="btn btn-danger">DELETAR</button>
+              </a>
+            </td>
+          </tr>
+        @endforeach
+      </tbody>
+    </table>
+  </div>
 @endsection
