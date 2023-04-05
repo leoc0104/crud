@@ -3,9 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ModelStudent;
+use App\Models\User;
 
 class StudentController extends Controller
 {
+    private $objUser;
+    private $objStudent;
+
+    public function __construct(){
+        $this->objUser = new User();
+        $this->objStudent = new ModelStudent();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +23,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('index');
     }
 
     /**
