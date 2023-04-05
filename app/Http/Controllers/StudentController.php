@@ -23,7 +23,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $student = $this->objStudent->all();
+        return view('index', compact('student'));
     }
 
     /**
