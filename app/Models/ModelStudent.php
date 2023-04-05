@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ModelStudent extends Model
 {
     protected $table = 'students';
+
+    public function relUsers(){
+        return $this->hasOne('App\Models\User', 'id', 'user_id');
+    }
 }
