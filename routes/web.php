@@ -15,4 +15,4 @@ use App\Http\Controllers\StudentController;
 |
 */
 
-Route::get('/students', [StudentController::class, 'index']);
+Route::resource('/students', StudentController::class);
