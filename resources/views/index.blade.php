@@ -17,6 +17,7 @@
         <tr>
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
+          <th scope="col">Email</th>
           <th scope="col">Apelido</th>
           <th scope="col">Idade</th>
           <th scope="col">Altura</th>
@@ -32,11 +33,12 @@
           <tr>
             <th scope="row">{{$students->id}}</th>
             <td>{{$user->name}}</td>
+            <td>{{$user->email}}</td>
             <td>{{$students->nickname}}</td>
             <td>{{$students->age}}</td>
             <td>{{$students->height}}</td>
             <td>
-              <a href="">
+              <a href="{{url("students/$students->id")}}">
                 <button class="btn btn-dark">VISUALIZAR</button>
               </a>
 
