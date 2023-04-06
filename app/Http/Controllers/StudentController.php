@@ -56,7 +56,8 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        $student = $this->objStudent->all()->find($id);
+        return view('show', compact('student'));
     }
 
     /**
