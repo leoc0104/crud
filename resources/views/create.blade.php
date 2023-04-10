@@ -9,7 +9,7 @@
 
       <input class="form-control" type="text" name="nickname" id="nickname" placeholder="Apelido"> <br />
       <select class="form-control" name="user_id" id="user_id">
-        <option value="">Selecione o usuário</option>
+        <option value="">--Selecione o usuário--</option>
         @foreach ($users as $user)
             <option value="{{$user->id}}">{{$user->name}}</option>
         @endforeach
