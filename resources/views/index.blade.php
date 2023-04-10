@@ -3,10 +3,10 @@
 @section('content')
   <h1 class="text-center mt-5 mb-5">CRUD</h1>
 
-  <hr>
+  <hr />
 
   <div class="text-center mt-4 mb-4">
-    <a href="">
+    <a href="{{url('students/create')}}">
       <button class="btn btn-success">CADASTRAR</button>
     </a>
   </div>
@@ -15,10 +15,10 @@
     <table class="table text-center">
       <thead class="thead-dark">
         <tr>
+          <th scope="col">Apelido</th>
           <th scope="col">ID</th>
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
-          <th scope="col">Apelido</th>
           <th scope="col">Idade</th>
           <th scope="col">Altura</th>
           <th scope="col">Ação</th>
@@ -32,9 +32,9 @@
           @endphp
           <tr>
             <th scope="row">{{$students->id}}</th>
+            <td>{{$students->nickname}}</td>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
-            <td>{{$students->nickname}}</td>
             <td>{{$students->age}}</td>
             <td>{{$students->height}}</td>
             <td>
