@@ -24,7 +24,8 @@ class StudentRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nickname'=>'required',
+            'age'=>'required|numeric'
         ];
     }
 }
