@@ -34,7 +34,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        $users = $this->objUser->all();
+        return view('create', compact('users'));
     }
 
     /**
