@@ -46,7 +46,12 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->objBook->create([
+            'nickname'=>$request->nickname,
+            'age'=>$request->age,
+            'height'=>$request->height,
+            'user_id'=>$request->user_id
+        ]);
     }
 
     /**
