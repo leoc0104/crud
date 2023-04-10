@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request\StudentRequest;
+use App\Http\Requests\StudentRequest;
 use App\Models\ModelStudent;
 use App\Models\User;
 
@@ -88,7 +88,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StudentRequest $request, $id)
     {
         //
     }
