@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request\StudentRequest;
 use App\Models\ModelStudent;
 use App\Models\User;
 
@@ -44,7 +44,7 @@ class StudentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StudentRequest $request)
     {
         $cre = $this->objStudent->create([
             'nickname'=>$request->nickname,
