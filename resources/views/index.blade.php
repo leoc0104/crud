@@ -15,8 +15,8 @@
     <table class="table text-center">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Apelido</th>
           <th scope="col">ID</th>
+          <th scope="col">Apelido</th>
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
           <th scope="col">Idade</th>
