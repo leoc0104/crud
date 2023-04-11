@@ -28,4 +28,12 @@ class StudentRequest extends FormRequest
             'age'=>'required|numeric'
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'nickname.required'=>'Coloque o apelido!',
+            'age.numeric'=>'Insira sua idade!'
+        ];
+    }
 }
