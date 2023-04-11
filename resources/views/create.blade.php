@@ -1,7 +1,7 @@
 @extends('templates.template')
 
 @section('content')
-  <h1 class="text-center mt-5 mb-4">CADASTRAR</h1>
+  <h1 class="text-center mt-5 mb-4">@if(isset($student)) EDITAR @else CADASTRAR @endif</h1>
 
   <div class="col-8 m-auto">
     @if(isset($errors) && count($errors) > 0)
@@ -25,7 +25,7 @@
       <br />
       <input class="form-control" type="text" name="age" id="age" placeholder="Idade" required> <br />
       <input class="form-control" type="text" name="height" id="height" placeholder="Altura" required> <br />
-      <input class="btn btn-primary" type="submit" value="CADASTRAR">
+      <input class="btn btn-primary" type="submit" value="@if(isset($student)) EDITAR @else CADASTRAR @endif">
     </form>
   </div>
 @endsection
