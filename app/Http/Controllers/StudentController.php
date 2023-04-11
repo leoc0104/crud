@@ -78,7 +78,9 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $student = $this->objStudent->find($id);
+        $users = $this->objUser->all();
+        return view('create', compact('student', 'users'));
     }
 
     /**
