@@ -4,7 +4,7 @@
   <h1 class="text-center mt-5 mb-4">CADASTRAR</h1>
 
   <div class="col-8 m-auto">
-    @if(isset($errors) && count($errors)>0)
+    @if(isset($errors) && count($errors) > 0)
       <div class="text-center mt-4 mb-4 p-2 alert-danger">
         @foreach($errors->all() as $erro)
           {{$erro}} <br />
