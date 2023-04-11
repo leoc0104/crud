@@ -42,7 +42,7 @@
                 <button class="btn btn-dark">VISUALIZAR</button>
               </a>
 
-              <a href="">
+              <a href="{{url("students/$students->id/edit")}}">
                 <button class="btn btn-primary">EDITAR</button>
               </a>
 
