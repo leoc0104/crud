@@ -12,20 +12,25 @@
       </div>
     @endif
 
-    <form name="formCre" id="formCre" method="POST" action="{{url('students')}}">
-      @csrf
+    @if(isset($student))
+      <form name="formEdit" id="formEdit" method="POST" action="{{url("students/$student->id")}}">
+        @method('PUT')
+    @else
+      <form name="formCre" id="formCre" method="POST" action="{{url('students')}}">
+    @endif
+        @csrf
 
-      <input class="form-control" type="text" name="nickname" id="nickname" placeholder="Apelido" required> <br />
-      <select class="form-control" name="user_id" id="user_id" required>
-        <option value="">--Selecione o usuário--</option>
-        @foreach ($users as $user)
-            <option value="{{$user->id}}">{{$user->name}}</option>
-        @endforeach
-      </select>
-      <br />
-      <input class="form-control" type="text" name="age" id="age" placeholder="Idade" required> <br />
-      <input class="form-control" type="text" name="height" id="height" placeholder="Altura" required> <br />
-      <input class="btn btn-primary" type="submit" value="@if(isset($student)) EDITAR @else CADASTRAR @endif">
-    </form>
+        <input class="form-control" type="text" name="nickname" id="nickname" placeholder="Apelido" value="{{$student->nickname ?? ''}}" required> <br />
+        <select class="form-control" name="user_id" id="user_id" required>
+          <option value="{{$student->relUsers->id ?? ''}}">{{$student->relUsers->name ?? '--Selecione um aluno--'}}</option>
+          @foreach ($users as $user)
+              <option value="{{$user->id}}">{{$user->name}}</option>
+          @endforeach
+        </select>
+        <br />
+        <input class="form-control" type="text" name="age" id="age" placeholder="Idade" value="{{$student->age ?? ''}}" required> <br />
+        <input class="form-control" type="text" name="height" id="height" placeholder="Altura" value="{{$student->height ?? ''}}" required> <br />
+        <input class="btn btn-primary" type="submit" value="@if(isset($student)) EDITAR @else CADASTRAR @endif">
+      </form>
   </div>
 @endsection
