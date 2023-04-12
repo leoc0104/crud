@@ -92,7 +92,14 @@ class StudentController extends Controller
      */
     public function update(StudentRequest $request, $id)
     {
-        //
+        $this->objStudent->where(['id'=>$id])->update([
+            'nickname'=>$request->nickname,
+            'age'=>$request->age,
+            'height'=>$request->height,
+            'user_id'=>$request->user_id
+        ]);
+
+        return redirect('students');
     }
 
     /**
