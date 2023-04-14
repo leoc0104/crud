@@ -15,6 +15,25 @@ class StudentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $student->create([
+            'nickname'=>'TDA',
+            'age'=>'18',
+            'height'=>'1.89',
+            'user_id'=>'1'
+        ]);
+
+        $student->create([
+            'nickname'=>'Rei delas',
+            'age'=>'18',
+            'height'=>'1.98',
+            'user_id'=>'1'
+        ]);
+
+        $student->create([
+            'nickname'=>'Filho do Elo',
+            'age'=>'18',
+            'height'=>'1.88',
+            'user_id'=>'1'
+        ]);
     }
 }
