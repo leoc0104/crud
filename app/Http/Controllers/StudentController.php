@@ -54,7 +54,7 @@ class StudentController extends Controller
         ]);
 
         if($cre){
-            return redirect('books');
+            return redirect('students');
         }
     }
 
@@ -110,6 +110,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del = $this->objStudent->destroy($id);
+        return($del) ? "sim" : "não";
     }
 }
