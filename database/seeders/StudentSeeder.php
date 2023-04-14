@@ -13,7 +13,7 @@ class StudentSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(ModelStudent $student)
     {
         $student->create([
             'nickname'=>'TDA',
