@@ -55,6 +55,7 @@
           </tr>
         @endforeach
       </tbody>
-    </table>
+    </table>    
+    {{ $student->links('pagination::bootstrap-4') }}
   </div>
 @endsection
