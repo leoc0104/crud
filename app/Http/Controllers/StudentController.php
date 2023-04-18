@@ -23,7 +23,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = $this->objStudent->all();
+        $student = $this->objStudent->paginate(2);
         return view('index', compact('student'));
     }
 
